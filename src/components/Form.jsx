@@ -1,3 +1,6 @@
+
+
+
 const Form = (props) => {
 
   return (
@@ -29,7 +32,7 @@ const Form = (props) => {
         />
       </form>
       <div>
-        <button>Back</button>
+        <button onClick={props.reducePage}>Back</button>
         {/* If you want your button to go back, you better hook up a method to it's onClick property here! */}
         <button onClick={props.incrementPage}>Next</button>
         {/* This button has already been hooked up for you, just gotta pass the prop to this component! */}

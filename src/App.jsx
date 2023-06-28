@@ -1,6 +1,9 @@
 import './styles/App.css'
 import { useState } from 'react'
 import Home from './components/Home'
+import Landing from './components/Landing'
+
+
 
 const App = () => {
   const [currentPage, setCurrentPage] = useState(0)
@@ -18,6 +21,12 @@ const App = () => {
     // If you decide to make a function for going BACK (bonus), maybe make it do the opposite of this?
   }
 
+  const reducePage = () => {
+    setCurrentPage((prevState) => prevState - 1)
+    // Already does what you need it to, just have to hook it up to your buttons with an onClick
+    // If you decide to make a function for going BACK (bonus), maybe make it do the opposite of this?
+  }
+
   return (
     <div className="App">
       <Home
@@ -27,7 +36,10 @@ const App = () => {
         email={formValues.email}
         incrementPage={incrementPage}
         handleChange={handleChange}
+        reducePage={reducePage}
       />
+    
+   
     </div>
   )
 }
